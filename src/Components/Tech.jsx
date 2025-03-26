@@ -1,9 +1,10 @@
 import { RiReactjsLine } from "react-icons/ri";
-import { SiMongodb, SiDjango } from "react-icons/si";
+import { SiDjango } from "react-icons/si";
 import { FaNodeJs } from "react-icons/fa";
 import { RiTailwindCssFill, RiNextjsLine } from "react-icons/ri";
 import { MdOutlineHtml } from "react-icons/md";
 import { MdCss } from "react-icons/md";
+import { FaPython } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const iconVariants = (duration) => ({
@@ -50,7 +51,7 @@ const Tech = () => {
           animate="animate"
           className="rounded-2xl border-4 border-neutral-800 p-4"
         >
-          <SiMongodb className="text-7xl" />
+          <FaPython className="text-7xl" />
         </motion.div>
         <motion.div
           variants={iconVariants(1)}

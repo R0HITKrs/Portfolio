@@ -2,11 +2,29 @@ import project1 from "../assets/projects/project-1.jpg";
 import project2 from "../assets/projects/project-2.jpg";
 import project3 from "../assets/projects/project-3.jpg";
 import project0 from "../assets/projects/project0.jpg";
+import project4 from "../assets/projects/project-4.png";
+
 export const PROFILE_CONTENT = `I'm Rohit Kumar, a diligent engineering graduate from Chandigarh University. With a strong foundation in programming languages such as C++, ReactJS, HTML, and CSS, I'm on the lookout for a software engineering internship to apply my academic knowledge and gain real-world experience. Equipped with expertise in data structures and object-oriented programming, I am confident in my ability to contribute effectively to a dynamic software engineering team. Excited to utilize my analytical, technical, and programming skills to thrive as an entry-level software engineer and make a positive impact.`;
 
 export const ABOUT_TEXT = `I am a dedicated and adaptable frontend developer passionate about building efficient, user-friendly web applications. With a solid foundation in software principles and methodologies, I am eager to contribute to a dynamic software engineering team and gain hands-on experience in the field. My background in data structures and object-oriented programming empowers me to tackle challenges with confidence and add value through my technical, analytical, and problem-solving skills. Motivated to make a meaningful impact as an entry-level software engineer, I bring a proactive approach to every project. Beyond coding, I stay active and enjoy exploring emerging technologies.`;
 
 export const EXPERIENCES = [
+  {
+    year: "Jan 2025 - Mar 2025",
+    role: "Web Developement Internship",
+    company: "Zidio Development",
+    description: `Built a responsive web interface using React.js and TailwindCSS, reducing page load time by 30% and improving mobile usability across devices. Worked closely with cross-functional teams to design, test, and launch two full-stack features, gaining practical experience in Git-based version control and collaborative development`,
+    technologies: [
+      "HTML",
+      "JavaScript",
+      "ReactJs",
+      "MongoDB",
+      "NodeJs/ExpressJs",
+      "TailwindCSS",
+    ],
+    certificate:
+      "https://drive.google.com/file/d/164zdBDvZVTcWwHIHnDvSFMVcXjECwnED/view?usp=sharing",
+  },
   {
     year: "Sept 2024 - Dec 2024",
     role: "Software Engineering Internship",
@@ -36,6 +54,14 @@ export const EXPERIENCES = [
 ];
 
 export const PROJECTS = [
+  {
+    title: "Animated Landing Page Website",
+    image: project4,
+    description:
+      "Designed and developed a visually engaging and responsive landing page to showcase creative front-end development skills.Optimized for cross-device compatibility and fast load times, improving user engagement and reducing bounce rate.Demonstrated expertise in responsive layout design, component-based architecture, and web performance optimization",
+    technologies: ["ReactJs", "TailwindCSS", "JavaScript", "GSAP"],
+    link: "https://inspiring-beignet-ee1651.netlify.app/",
+  },
   {
     title: "Interview Genie",
     image: project0,

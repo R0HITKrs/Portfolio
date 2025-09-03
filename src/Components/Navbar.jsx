@@ -14,8 +14,9 @@ const Navbar = () => {
       <div className="m-8 flex item-center justify-center gap-4 text-2xl">
         <a
           target="_blank"
-          href="https://www.linkedin.com/in/rohit-kumar-77231821b/"
+          href="https://www.linkedin.com/in/rohit-kumar-80861035b/"
         >
+{/*           https://www.linkedin.com/in/rohit-kumar-77231821b/ */}
           <FaLinkedin />
         </a>
         <a target="_blank" href="https://github.com/R0HITKrs">

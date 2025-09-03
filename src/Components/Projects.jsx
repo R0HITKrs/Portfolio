@@ -1,3 +1,4 @@
+import { FaExternalLinkAlt } from "react-icons/fa";
 import { PROJECTS } from "../constants";
 import { motion } from "framer-motion";
 
@@ -36,9 +37,16 @@ const Projects = () => {
               className="w-full max-w-xl lg:w-3/4"
             >
               <h6 className="mb-2 font-semibold text-cyan-500 tracking-tight">
-                <a target="blank" href={projects.link}>
-                  {projects.title}
-                </a>
+                <h2 className="flex items-center gap-2 font-bold text-lg">
+                  {projects.title}{" "}
+                  <a
+                    className="font-thin text-sm"
+                    target="blank"
+                    href={projects.link}
+                  >
+                    <FaExternalLinkAlt />
+                  </a>
+                </h2>
               </h6>
               <p className="mb-4 text-purple-200 tracking-tight">
                 {projects.description}

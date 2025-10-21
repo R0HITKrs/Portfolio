@@ -14,12 +14,14 @@ const Experience = () => {
               <p className="mb-2 text-small text-neutral-400">
                 {experience.year}
               </p>
-              <div className="text-sm text-white flex items-center gap-2">
-                Certificate
-                <a target="blank" href={experience.certificate}>
-                  <TbCertificate />
-                </a>
-              </div>
+              {experience.certificate && (
+                <div className="text-sm text-white flex items-center gap-2">
+                  Certificate
+                  <a target="_blank" href={experience.certificate}>
+                    <TbCertificate />
+                  </a>
+                </div>
+              )}
             </div>
             <div className="w-full max-w-xl lg:w-3/4">
               <h6 className="mb-2 font-semibold">

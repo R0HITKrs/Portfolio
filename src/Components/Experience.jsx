@@ -17,7 +17,7 @@ const Experience = () => {
         {EXPERIENCES.map((experience, index) => (
           <div
             key={index}
-            className="mb-8 flex flex-wrap lg:justify-center w-full max-w-5xl bg-neutral-900/30 p-8 rounded-2xl border border-neutral-800 hover:border-purple-500/30 transition-all duration-300 hover:bg-neutral-900/50 hover:shadow-[0_0_15px_rgba(168,85,247,0.1)]"
+            className="mb-8 flex flex-wrap lg:justify-center w-full max-w-5xl bg-neutral-900/30 p-8 rounded-2xl border border-neutral-800 hover:border-white/30 transition-all duration-300 hover:bg-neutral-900/50 hover:shadow-[0_0_15px_rgba(255,255,255,0.1)]"
           >
             <motion.div
               whileInView={{ opacity: 1, x: 0 }}

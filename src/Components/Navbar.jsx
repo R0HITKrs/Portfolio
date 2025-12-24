@@ -1,4 +1,3 @@
-import Logo from "../assets/Logo.png";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
@@ -9,7 +8,6 @@ const Navbar = () => {
   return (
     <nav className="mb-20 flex items-center justify-between py-6">
       <div className="flex flex-shrink-0 items-center">
-        <img style={{ width: "150px", height: "60px" }} src={Logo} alt="Logo" />
       </div>
       <div className="flex items-center gap-4 text-2xl">
         <a
@@ -17,7 +15,6 @@ const Navbar = () => {
           href="https://www.linkedin.com/in/rohit-kumar-80861035b/"
           className="hover:text-cyan-400 transition-colors duration-300"
         >
-{/*           https://www.linkedin.com/in/rohit-kumar-77231821b/ */}
           <FaLinkedin />
         </a>
         <a target="_blank" href="https://github.com/R0HITKrs" className="hover:text-cyan-400 transition-colors duration-300">

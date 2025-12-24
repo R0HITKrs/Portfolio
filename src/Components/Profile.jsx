@@ -1,5 +1,6 @@
 import { PROFILE_CONTENT } from "../constants";
-import profilePic from "../assets/RohitProfile.jpeg";
+import { TypeAnimation } from "react-type-animation";
+import profilePic from "../assets/RohitProfile.png";
 import { delay, motion } from "framer-motion";
 
 const Container = (delay) => ({
@@ -14,7 +15,7 @@ const Container = (delay) => ({
 const Profile = () => {
   return (
     <div className="border-b border-neutral-900 pb-4 lg:mb-35">
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap items-center justify-center">
         <div className="w-full lg:w-1/2">
           <div className="flex flex-col items-center lg:items-start">
             <motion.h1
@@ -25,19 +26,25 @@ const Profile = () => {
             >
               Rohit Kumar
             </motion.h1>
-            <motion.span
-              variants={Container(0.5)}
-              initial="hidden"
-              animate="visible"
-              className="bg-gradient-to-r font-thin from-blue-300 via-slate-500 to-teal-500 bg-clip-text text-4xl tracking-tight text-transparent"
-            >
-              FRONT-END DEVELOPER
-            </motion.span>
+            <TypeAnimation
+              sequence={[
+                "Front-End Developer",
+                1000,
+                "Web Designer",
+                1000,
+                "FULL STACK DEVELOPER",
+                1000,
+              ]}
+              wrapper="span"
+              speed={50}
+              repeat={Infinity}
+              className="bg-gradient-to-r font-medium from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-4xl tracking-tight text-transparent"
+            />
             <motion.p
               variants={Container(1)}
               initial="hidden"
               animate="visible"
-              className="my-2 max-w-xl py-6 text-white tracking-tighter"
+              className="my-2 max-w-xl py-6 text-white leading-relaxed font-light"
             >
               {PROFILE_CONTENT}
             </motion.p>
@@ -46,10 +53,22 @@ const Profile = () => {
         <div className="w-full lg:w-1/2 lg:p-8">
           <div className="flex justify-center">
             <motion.img
-              className="rounded-2xl h-800px"
+              className="rounded-2xl h-auto max-w-sm shadow-[0_0_25px_rgba(168,85,247,0.4)]"
               initial={{ x: 100, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 1, delay: 1.2 }}
+              animate={{
+                x: 0,
+                opacity: 1,
+                y: [0, -20, 0],
+              }}
+              transition={{
+                x: { duration: 1, delay: 1.2 },
+                opacity: { duration: 1, delay: 1.2 },
+                y: {
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                },
+              }}
               src={profilePic}
               alt="Rohit"
             />

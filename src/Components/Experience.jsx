@@ -1,45 +1,72 @@
 import { EXPERIENCES } from "../constants";
 import { TbCertificate } from "react-icons/tb";
+import { motion } from "framer-motion";
 
 const Experience = () => {
   return (
     <div className="border-b border-neutral-900 pb-4">
-      <h2 className="my-20 font-thin text-center text-4xl tracking-tight">
+      <motion.h2
+        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: -100 }}
+        transition={{ duration: 0.5 }}
+        className="my-20 font-thin text-center text-4xl tracking-tight"
+      >
         Experience
-      </h2>
-      <div>
+      </motion.h2>
+      <div className="flex flex-col items-center">
         {EXPERIENCES.map((experience, index) => (
-          <div key={index} className="mb-8 flex flex-wrap lg:justify-center">
-            <div className="w-full lg:w-1/4">
-              <p className="mb-2 text-small text-neutral-400">
+          <div
+            key={index}
+            className="mb-8 flex flex-wrap lg:justify-center w-full max-w-5xl bg-neutral-900/30 p-8 rounded-2xl border border-neutral-800 hover:border-purple-500/30 transition-all duration-300 hover:bg-neutral-900/50 hover:shadow-[0_0_15px_rgba(168,85,247,0.1)]"
+          >
+            <motion.div
+              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, x: -100 }}
+              transition={{ duration: 1 }}
+              className="w-full lg:w-auto lg:min-w-[140px] lg:max-w-[160px] mb-4 lg:mb-0 lg:mr-6"
+            >
+              <p className="mb-2 text-sm font-bold text-cyan-400 tracking-wide uppercase">
                 {experience.year}
               </p>
               {experience.certificate && (
-                <div className="text-sm text-white flex items-center gap-2">
-                  Certificate
-                  <a target="_blank" href={experience.certificate}>
+                <div className="text-sm text-neutral-300 flex items-center gap-2 hover:text-cyan-400 transition-colors cursor-pointer">
+                  <span>Certificate</span>
+                  <a
+                    target="_blank"
+                    href={experience.certificate}
+                    className="text-lg"
+                  >
                     <TbCertificate />
                   </a>
                 </div>
               )}
-            </div>
-            <div className="w-full max-w-xl lg:w-3/4">
-              <h6 className="mb-2 font-semibold">
-                {experience.role} -{" "}
-                <span className="text-sm text-purple-100">
+            </motion.div>
+            <motion.div
+              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, x: 100 }}
+              transition={{ duration: 1 }}
+              className="w-full lg:flex-1"
+            >
+              <h6 className="mb-2 font-bold text-xl text-white">
+                {experience.role}
+                <span className="block mt-1 text-sm bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
                   {experience.company}
                 </span>
               </h6>
-              <p className="mb-4 text-neutral-400">{experience.description}</p>
-              {experience.technologies.map((tech, index) => (
-                <span
-                  key={index}
-                  className="mr-4 mt-4 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-800"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
+              <p className="mb-6 text-neutral-400 leading-relaxed text-justify">
+                {experience.description}
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {experience.technologies.map((tech, index) => (
+                  <span
+                    key={index}
+                    className="rounded-full bg-purple-900/20 border border-purple-700/30 px-3 py-1 text-xs font-medium text-purple-300 hover:bg-purple-900/40 hover:text-purple-100 transition-colors"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </motion.div>
           </div>
         ))}
       </div>
